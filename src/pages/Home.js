@@ -5,43 +5,32 @@ const skillCategories = [
   {
     title: "Languages",
     items: [
-      { name: "C", slug: "c" },
-      { name: "C++", slug: "cplusplus" },
-      { name: "Go", slug: "go" },
       { name: "Python", slug: "python" },
+      { name: "C++", slug: "cplusplus" },
       { name: "JavaScript", slug: "javascript" },
-      { name: "TypeScript", slug: "typescript" },
-      { name: "R", slug: "r" },
     ],
   },
   {
     title: "Web & Backend",
     items: [
       { name: "React", slug: "react" },
-      { name: "Next.js", slug: "nextdotjs" },
       { name: "Flask", slug: "flask" },
       { name: "Node.js", slug: "nodedotjs" },
-      { name: "REST APIs" },
     ],
   },
   {
     title: "AI / ML",
     items: [
-      { name: "TensorFlow", slug: "tensorflow" },
       { name: "PyTorch", slug: "pytorch" },
       { name: "scikit-learn", slug: "scikitlearn" },
       { name: "LangChain", slug: "langchain" },
-      { name: "LLM APIs", slug: "openai" },
     ],
   },
   {
     title: "Data & Systems",
     items: [
-      { name: "FAISS" },
-      { name: "ChromaDB" },
       { name: "Pandas", slug: "pandas" },
       { name: "NumPy", slug: "numpy" },
-      { name: "Distributed Systems" },
     ],
   },
   {
@@ -49,7 +38,6 @@ const skillCategories = [
     items: [
       { name: "Git", slug: "git" },
       { name: "Docker", slug: "docker" },
-      { name: "API Development" },
     ],
   },
 ];
@@ -58,66 +46,92 @@ function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <img
-          src={`${process.env.PUBLIC_URL}/Aadya%20Sharma.jpeg`}
-          alt="Aadya Sharma"
-          className="profile-pic"
-        />
+        <div className="hero-portrait">
+          <img
+            src={`${process.env.PUBLIC_URL}/pranishk.jpeg`}
+            alt="Pranishk Reddy"
+            className="profile-pic"
+          />
+        </div>
         <div className="hero-text">
+          <p className="hero-eyebrow">Portfolio — 2026</p>
           <h1>
-            Hi, I'm <span>Aadya Sharma</span>
+            Pranishk <span>Reddy</span>
           </h1>
           <p className="tagline">
-            Artificial Intelligence student building impactful tech solutions.
+            Artificial Intelligence student building smart, scalable
+            technologies that solve real-world problems.
           </p>
+          <div className="hero-meta">
+            <span>Mahindra University</span>
+            <span className="dot" aria-hidden="true" />
+            <span>Hyderabad, India</span>
+          </div>
         </div>
       </section>
 
-      <section className="card">
+      <section className="card card-about">
+        <span className="card-index">01</span>
         <h2>About Me</h2>
         <p>
-          I am an Artificial Intelligence undergraduate at Mahindra University
-          with a strong interest in building intelligent, scalable systems. I
-          enjoy working at the intersection of AI and real-world problem
-          solving. My experience spans developing AI-driven platforms,
-          decentralized applications, and voice-based systems. I am particularly
-          driven by creating technology that has meaningful social impact, such
-          as healthcare solutions.
+          I am currently pursuing a degree in Artificial Intelligence at
+          Mahindra University, with a keen focus on developing smart, scalable
+          technologies. I&rsquo;m driven by the challenge of applying AI to
+          practical, real-world problems, especially where innovation can
+          create tangible value. Beyond academics, I enjoy traveling and
+          exploring new places, and I have a strong interest in sports,
+          particularly cricket and snooker, which help me stay active and
+          maintain a balanced lifestyle.
         </p>
       </section>
 
-      <section className="card">
-        <h2>Research Interests</h2>
-        <ul>
-          <li>Machine Learning &amp; Deep Learning</li>
-          <li>Artificial Intelligence &amp; LLM Applications</li>
-          <li>Data Science &amp; Predictive Systems</li>
-          <li>Distributed Systems &amp; Scalable Backend Development</li>
-        </ul>
-      </section>
+      <div className="info-grid">
+        <section className="card card-interests">
+          <span className="card-index">02</span>
+          <h2>Research Interests</h2>
+          <ul>
+            <li>Recommender Systems</li>
+            <li>Natural Language Processing (NLP)</li>
+            <li>Computer Vision</li>
+            <li>Human-Centered AI &amp; Social Impact</li>
+          </ul>
+        </section>
 
-      <section className="card">
-        <h2>Personal Details</h2>
-        <ul className="details-list">
-          <li><strong>Name:</strong> Aadya Sharma</li>
-          <li>
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+917675847299">+91-7675847299</a>
-          </li>
-          <li>
-            <strong>Personal Email:</strong>{" "}
-            <a href="mailto:aadyasindia@gmail.com">aadyasindia@gmail.com</a>
-          </li>
-          <li>
-            <strong>College Email:</strong>{" "}
-            <a href="mailto:se23uari168@mahindrauniversity.edu.in">
-              se23uari168@mahindrauniversity.edu.in
-            </a>
-          </li>
-        </ul>
-      </section>
+        <section className="card card-details">
+          <span className="card-index">03</span>
+          <h2>Personal Details</h2>
+          <ul className="details-list">
+            <li>
+              <span className="detail-label">Name</span>
+              <span className="detail-value">Pranishk Reddy</span>
+            </li>
+            <li>
+              <span className="detail-label">Phone</span>
+              <a className="detail-value" href="tel:+919618013409">
+                +91-9618013409
+              </a>
+            </li>
+            <li>
+              <span className="detail-label">Personal Email</span>
+              <a className="detail-value" href="mailto:reddypranishk@gmail.com">
+                reddypranishk@gmail.com
+              </a>
+            </li>
+            <li>
+              <span className="detail-label">College Email</span>
+              <a
+                className="detail-value"
+                href="mailto:se23uari099@mahindrauniversity.edu.in"
+              >
+                se23uari099@mahindrauniversity.edu.in
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
 
-      <section className="card">
+      <section className="card card-skills">
+        <span className="card-index">04</span>
         <h2>Skills</h2>
         <div className="skills-categories">
           {skillCategories.map((cat) => (

@@ -1,5 +1,5 @@
 .navbar {
-  background: rgba(10, 7, 14, 0.75);
+  background: rgba(5, 10, 22, 0.78);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -19,7 +19,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(236, 72, 153, 0.5),
+    rgba(59, 130, 246, 0.55),
     transparent
   );
   opacity: 0.8;
@@ -78,16 +78,16 @@
 
 .nav-link:hover {
   color: var(--text);
-  background: rgba(236, 72, 153, 0.08);
+  background: rgba(59, 130, 246, 0.1);
   border-color: var(--border);
 }
 
 .nav-link.active {
   color: var(--text);
-  background: rgba(236, 72, 153, 0.15);
+  background: rgba(59, 130, 246, 0.18);
   border-color: var(--border-hover);
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2),
-    inset 0 0 20px rgba(236, 72, 153, 0.05);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25),
+    inset 0 0 20px rgba(59, 130, 246, 0.06);
 }
 
 .nav-link.active::before {
