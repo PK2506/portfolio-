@@ -1,0 +1,90 @@
+:root {
+  --bg: #07040a;
+  --bg-elev: #120b18;
+  --card: #15101d;
+  --card-hover: #1c1425;
+  --border: rgba(236, 72, 153, 0.12);
+  --border-hover: rgba(236, 72, 153, 0.45);
+  --text: #f4f1f6;
+  --text-muted: #9a94a3;
+  --pink: #ec4899;
+  --pink-light: #f472b6;
+  --magenta: #d946ef;
+  --pink-soft: rgba(236, 72, 153, 0.15);
+  --pink-glow: rgba(236, 72, 153, 0.35);
+  --gradient-pink: linear-gradient(135deg, #ec4899 0%, #d946ef 60%, #a855f7 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", "Roboto",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(236, 72, 153, 0.18) 0%, transparent 40%),
+    radial-gradient(circle at 88% 82%, rgba(168, 85, 247, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 55% 50%, rgba(217, 70, 239, 0.08) 0%, transparent 55%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 75%);
+}
+
+code {
+  font-family: "JetBrains Mono", source-code-pro, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--pink);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0b070f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3a1a2e, #5a1f3e);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink);
+}

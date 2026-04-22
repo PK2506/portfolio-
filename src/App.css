@@ -1,0 +1,47 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.25),
+      0 0 0 2px rgba(236, 72, 153, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(236, 72, 153, 0.5),
+      0 0 0 2px rgba(244, 114, 182, 0.7);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
